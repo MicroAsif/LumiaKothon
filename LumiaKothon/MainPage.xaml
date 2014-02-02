@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="LumiaKothon.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:chandrabindu="clr-namespace:PhoneticBanglaTextBoxWP8;assembly=PhoneticBanglaTextBoxWP8"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="DarkCyan">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <phone:Pivot>
+            <phone:PivotItem Header="লুমিয়া কথন">
+                <Grid>
+                    <TextBox  Height="300" Margin="0,10,0,297"  />
+                    <Button Name="ButtonPost" Margin="0,310,0,219" Content="Post" />
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="কমন প্রশ্নের উত্তর">
+            <chandrabindu:PhoneticBanglaTextBox Margin="-10,10,0,531"/>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="লোকাল আপস ">
+
+            </phone:PivotItem>
+        </phone:Pivot>
+        
+        
+        <!--TitlePanel contains the name of the application and page title-->
+        <!--<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            
+            <TextBlock Text="লুমিয়া কথন" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>-->
+
+        <!--ContentPanel - place additional content here-->
+        <!--<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+          <TextBox  Height="300" Margin="0,10,0,297"  />
+            <Button Name="ButtonPost" Margin="0,310,0,209" Content="Post" />
+        </Grid>-->
+
+    
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Chandrabindu</id>
+    <version>0.0.1</version>
+    <title>Chandrabindu</title>
+    <authors>Swagata Prateek, NerdCats</authors>
+    <owners>Swagata Prateek, NerdCats</owners>
+    <licenseUrl>https://chandrabindu.codeplex.com/license</licenseUrl>
+    <projectUrl>https://chandrabindu.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Chandrabindu is the first bangla phonetic custom control for Windows Phone 8. Just add the .dll, hook it up and your're done. Your app is Bangla Enabled.</description>
+    <summary>Bangla Phonetic Composer Custom Control for Windows Phone 8</summary>
+    <releaseNotes>(v 0.0.1) Still an alpha, only good for writing Bangla. Better not to use any events fired from that and it will create it to malfunction. We're working on it still.</releaseNotes>
+    <copyright>NerdCats</copyright>
+    <language />
+    <tags>bangla phoneticKeyboard phonetic</tags>
+  </metadata>
+</package>
