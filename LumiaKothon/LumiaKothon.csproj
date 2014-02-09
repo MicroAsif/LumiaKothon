@@ -93,13 +93,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConnectPage.xaml.cs">
-      <DependentUpon>ConnectPage.xaml</DependentUpon>
+    <Compile Include="Chandrabindu.xaml.cs">
+      <DependentUpon>Chandrabindu.xaml</DependentUpon>
     </Compile>
     <Compile Include="FacebookApi\FacebookClients.cs" />
     <Compile Include="FacebookApi\ResponseData.cs" />
     <Compile Include="FacebookTools\KeyPairValue.cs" />
     <Compile Include="FacebookTools\UriToolkit.cs" />
+    <Compile Include="FBConnect.xaml.cs">
+      <DependentUpon>FBConnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FBMain.xaml.cs">
+      <DependentUpon>FBMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\FullScreenPanorama.cs" />
     <Compile Include="Helper\ShowProcessbar.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -118,7 +124,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="ConnectPage.xaml">
+    <Page Include="Chandrabindu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FBConnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FBMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,9 +189,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BindableApplicationBar">
+      <HintPath>..\packages\BindableApplicationBar.1.1.0.0\lib\wp8\BindableApplicationBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="PhoneticBanglaTextBoxWP8">
       <HintPath>..\packages\Chandrabindu.0.0.1\lib\PhoneticBanglaTextBoxWP8.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />

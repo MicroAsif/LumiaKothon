@@ -10,16 +10,17 @@ using Microsoft.Phone.Shell;
 
 namespace LumiaKothon
 {
-    public partial class ConnectPage : PhoneApplicationPage
+    public partial class Chandrabindu : PhoneApplicationPage
     {
-        public ConnectPage()
+        public Chandrabindu()
         {
             InitializeComponent();
         }
 
-        private void WebBrowser_Navigated(object sender, NavigationEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Clipboard.SetText(Txtbangla.Text);
+            
         }
     }
 }
