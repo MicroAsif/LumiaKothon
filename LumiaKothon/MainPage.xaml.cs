@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using LumiaKothon.Resources;
+using LumiaKothon.Helper;
 
 namespace LumiaKothon
 {
@@ -17,9 +18,15 @@ namespace LumiaKothon
         public MainPage()
         {
             InitializeComponent();
+            this.Loaded += MainPage_Loaded;
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            ProgressIndicatorHelper.ShowProgressIndicator("Loading Data ......");
         }
 
         // Sample code for building a localized ApplicationBar

@@ -5,6 +5,7 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LumiaKothon"
     xmlns:chandrabindu="clr-namespace:PhoneticBanglaTextBoxWP8;assembly=PhoneticBanglaTextBoxWP8"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -15,43 +16,81 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="DarkCyan">
+
+    <Grid x:Name="LayoutRoot" Background="#07b9f4">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
-        <phone:Pivot>
-            <phone:PivotItem Header="লুমিয়া কথন">
-                <Grid>
-                    <TextBox  Height="300" Margin="0,10,0,297"  />
-                    <Button Name="ButtonPost" Margin="0,310,0,219" Content="Post" />
-                </Grid>
-            </phone:PivotItem>
-            <phone:PivotItem Header="কমন প্রশ্নের উত্তর">
-            <chandrabindu:PhoneticBanglaTextBox Margin="-10,10,0,531"/>
-            </phone:PivotItem>
-
-            <phone:PivotItem Header="লোকাল আপস ">
-
-            </phone:PivotItem>
-        </phone:Pivot>
-        
-        
         <!--TitlePanel contains the name of the application and page title-->
-        <!--<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            
-            <TextBlock Text="লুমিয়া কথন" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>-->
 
-        <!--ContentPanel - place additional content here-->
-        <!--<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-          <TextBox  Height="300" Margin="0,10,0,297"  />
-            <Button Name="ButtonPost" Margin="0,310,0,209" Content="Post" />
-        </Grid>-->
 
-    
+        <!--ContentPanel contains LongListSelector and LongListSelector ItemTemplate. Place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="#07b9f4">
+
+            <local:PanoramaFullScreen>
+                <local:PanoramaFullScreen.Background>
+                    <ImageBrush AlignmentX="Left" ImageSource="" Opacity="0.05" Stretch="UniformToFill"/>
+                </local:PanoramaFullScreen.Background>
+                <phone:PanoramaItem >
+                    <Grid Height="Auto" Width="Auto" >
+                        <Image Source="/Images/Title.png" Margin="0,0,0,173"  ></Image>
+
+                        <Image Source="/Images/SlideToSee-01.png" Margin="53,439,61,44"></Image>
+                        <TextBlock HorizontalAlignment="Left" Margin="50,396,0,0" TextWrapping="Wrap" Text="fb.com/groups/lumiakothon/"
+                                   VerticalAlignment="Top" FontSize="26" Width="338" />
+                    </Grid>
+                </phone:PanoramaItem>
+                <phone:PanoramaItem>
+                    <Grid  >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1.5*"/>
+                                <RowDefinition Height="8*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="/Images/FirstPart.png" HorizontalAlignment="Left" Margin="2,8,0,6" />
+                            <TextBlock 
+                            Grid.Row="1" TextWrapping="Wrap" Margin="0,38,0,0"  
+                            
+                            FontFamily="{StaticResource PhoneFontFamilyLight}" 
+                            FontSize="{StaticResource PhoneFontSizeMediumLarge}"></TextBlock>
+
+
+                        </Grid>
+
+                    </Grid>
+                </phone:PanoramaItem>
+                <phone:PanoramaItem>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="8*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+                        <Image Grid.Row="0" Source="Images/FirstPart.png" HorizontalAlignment="Left" Margin="248,8,0,6" />
+
+
+
+                    </Grid>
+
+                </phone:PanoramaItem>
+                <phone:PanoramaItem  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="8*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" Source="/Images/FirstPart.png" HorizontalAlignment="Left" Margin="0,8,0,6" />
+
+
+                    </Grid>
+                </phone:PanoramaItem>
+
+            </local:PanoramaFullScreen>
+        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>
