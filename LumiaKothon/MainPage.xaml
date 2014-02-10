@@ -43,19 +43,22 @@
                     </Grid>
                 </phone:PanoramaItem>
                 <phone:PanoramaItem>
-                    <Grid  >
+                    <Grid  > 
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1.5*"/>
                                 <RowDefinition Height="8*"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <Image Grid.Row="0" Source="/Images/FirstPart.png" HorizontalAlignment="Left" Margin="2,8,0,6" />
+                            <Image Grid.Row="0" Source="/Images/FirstPart.png" HorizontalAlignment="Left" Margin="0,-10,0,0" Width="444" />
                             <TextBlock 
-                            Grid.Row="1" TextWrapping="Wrap" Margin="0,38,0,0"  
-                            
+                            Grid.Row="0" TextWrapping="Wrap" Margin="0,79,0,574"  
+                            Text="আপনার প্রশ্নোটি সরাসরি লুমিয়া কথন জিজ্ঞাসা করুন! "
                             FontFamily="{StaticResource PhoneFontFamilyLight}" 
-                            FontSize="{StaticResource PhoneFontSizeMediumLarge}"></TextBlock>
-
+                            FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.RowSpan="2"></TextBlock>
+                            
+                            <TextBox Grid.Row="1" Name="post" Margin="-10,43,10,244"/>
+                            <Button Grid.Row="1" Name="ButtonPost" Height="80" Content="পোস্ট করুন" Margin="-10,361,160,175"  />
+                            <Button Grid.Row="1" x:Name="ButtonBangla" Height="80" Content="বাংলা ?" Margin="266,361,10,175"  />
 
                         </Grid>
 
@@ -69,7 +72,7 @@
                         </Grid.RowDefinitions>
 
 
-                        <Image Grid.Row="0" Source="Images/FirstPart.png" HorizontalAlignment="Left" Margin="248,8,0,6" />
+                        <Image Grid.Row="0" Source="Images/FirstPart.png" HorizontalAlignment="Left" Margin="0,8,0,6" />
 
 
 
@@ -92,5 +95,7 @@
             </local:PanoramaFullScreen>
         </Grid>
     </Grid>
+    
+    
 
 </phone:PhoneApplicationPage>

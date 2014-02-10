@@ -93,6 +93,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConnectPage.xaml.cs">
+      <DependentUpon>ConnectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookApi\FacebookClients.cs" />
+    <Compile Include="FacebookApi\ResponseData.cs" />
+    <Compile Include="FacebookTools\KeyPairValue.cs" />
+    <Compile Include="FacebookTools\UriToolkit.cs" />
     <Compile Include="Helper\FullScreenPanorama.cs" />
     <Compile Include="Helper\ShowProcessbar.cs" />
     <Compile Include="LocalizedStrings.cs" />
@@ -111,6 +118,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="ConnectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +178,10 @@
     <Reference Include="PhoneticBanglaTextBoxWP8">
       <HintPath>..\packages\Chandrabindu.0.0.1\lib\PhoneticBanglaTextBoxWP8.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
